@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>freeCodeCamp - Survey Form Project</title>
+
+    <style>
+        body {
+           background-color: blue; 
+        }
+        #title,
+        #description {
+            text-align: center;
+        }
+        main {
+            margin: auto;
+            background-color: white;
+            width: 90vw;
+            height: 70vh;
+            border: 1px solid black;
+        }
+        #survey-form {
+            width: 50vw;
+            padding: 20px;
+            margin: auto;
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1 id="title">Survey Form</h1>
+    </header>
+    <main>
+        <p id="description">This is a survey form challenge from freeCodeCamp. Let's keep our "Marvel Cinematic Universe" theme going.</p>
+
+        <form action="" id="survey-form">
+            <fieldset>
+                <p>
+                    <label id="name-label" for="name">*Name</label>
+                    <input id="name" type="text" name="name" placeholder="enter your name" required>
+                </p>
+                <p>
+                    <label id="email-label" for="email">*Email</label>
+                    <input id="email" type="email" name="email" label id="email-label"placeholder="enter your email address" required>
+                </p>
+                <p>
+                    <label id="number-label" for="age">*Age</label>
+                    <input id="number" type="number" name="age" label id="number-label"placeholder="age" min="1" max="99"required>
+                </p>
+
+            </fieldset>
+
+        </form>
+    </main>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
