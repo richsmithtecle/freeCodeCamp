@@ -9,12 +9,14 @@
 
     <style>
         body {
-           background-color: blue; 
+            background-color: steelblue;
         }
+
         #title,
         #description {
             text-align: center;
         }
+
         main {
             margin: auto;
             background-color: white;
@@ -22,11 +24,26 @@
             height: 70vh;
             border: 1px solid black;
         }
+
         #survey-form {
             width: 50vw;
             padding: 20px;
             margin: auto;
             border: 1px solid black;
+        }
+
+        fieldset {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .movieswatched {
+            display: flex;
+        }
+
+        .movies {
+            display: flex;
+            flex-direction: column;
         }
     </style>
 
@@ -37,7 +54,8 @@
         <h1 id="title">Survey Form</h1>
     </header>
     <main>
-        <p id="description">This is a survey form challenge from freeCodeCamp. Let's keep our "Marvel Cinematic Universe" theme going.</p>
+        <p id="description">This is a survey form challenge from freeCodeCamp. Let's keep our "Marvel Cinematic Universe"
+            theme going.</p>
 
         <form action="" id="survey-form">
             <fieldset>
@@ -47,12 +65,82 @@
                 </p>
                 <p>
                     <label id="email-label" for="email">*Email</label>
-                    <input id="email" type="email" name="email" label id="email-label"placeholder="enter your email address" required>
+                    <input id="email" type="email" name="email" label id="email-label" placeholder="enter your email address" required>
                 </p>
                 <p>
                     <label id="number-label" for="age">*Age</label>
-                    <input id="number" type="number" name="age" label id="number-label"placeholder="age" min="1" max="99"required>
+                    <input id="number" type="number" name="age" label id="number-label" placeholder="age" min="1" max="99" required>
                 </p>
+
+
+
+                <label id="dropdown-label" for="dropdown">*Occupation Status</label>
+                <select name="dropdown" id="dropdown" required>
+                    <option value="student">Student</option>
+                    <option value="part-time">Part-time</option>
+                    <option value="full-time">Full-time</option>
+                    <option value="preference">Prefer not to say</option>
+                    <option value="other">Other</option>
+                </select>
+
+
+                <section id="fanstatus">
+                    <p>Do you consider yourself a comic book fan?</p>
+                    <div>
+                        <input type="radio" id="fanChoice1" name="fan" value="yes">
+                        <label for="fanChoice1">Yes</label>
+
+                        <input type="radio" id="fanChoice2" name="fan" value="no">
+                        <label for="fanChoice2">No</label>
+
+                        <input type="radio" id="fanChoice3" name="fan" value="maybe">
+                        <label for="fanChoice3">Maybe</label>
+                    </div>
+                </section>
+
+                <section class="movieswatched">
+                    <p>Which of the following movies have you seen?</p>
+                    <div class="movies">
+                        <div class="movie">
+                            <input type="checkbox" name="movieName" id="iron-man1" value="iron-man1">
+                            <label for="iron-man1">Iron Man</label>
+                        </div>
+
+                        <div class="movie">
+                            <input type="checkbox" name="movieName" id="hulk" value="hulk">
+                            <label for="hulk">The Incredible Hulk</label>
+                        </div>
+
+                        <div class="movie">
+                            <input type="checkbox" name="movieName" id="iron-man2" value="iron-man2">
+                            <label for="iron-man2">Iron Man 2</label>
+                        </div>
+
+                        <div class="movie">
+                            <input type="checkbox" name="movieName" id="thor1" value="thor1">
+                            <label for="thor1">Thor</label>
+                        </div>
+
+                        <div class="movie">
+                            <input type="checkbox" name="movieName" id="cap1" value="cap1">
+                            <label for="cap1">Captain America: The First Avenger</label>
+                        </div>
+
+                        <div class="movie">
+                            <input type="checkbox" name="movieName" id="avengers1" value="avengers1">
+                            <label for="avengers1">The Avengers</label>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section class="comments">
+                    <p>Any comments or suggestions?</p>
+                    <textarea name="comment" id="comment" cols="50" rows="5"></textarea>
+
+
+                </section>
+                <input type="submit" id="submit" value="Submit">
 
             </fieldset>
 
