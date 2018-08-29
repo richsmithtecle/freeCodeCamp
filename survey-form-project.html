@@ -21,50 +21,47 @@
             margin: auto;
             background-color: white;
             width: 90vw;
-            height: 70vh;
             border: 1px solid black;
         }
 
         #survey-form {
-            width: 50vw;
-            padding: 20px;
-            margin: auto;
-            border: 1px solid black;
+            width: 75vw;
+            padding: 1.25rem;
+            margin: 1.25rem auto;
+            border: 1px solid red;
+            background: whitesmoke;
         }
 
-        fieldset {
-            display: flex;
-            flex-direction: row;
-        }
-
-        .movieswatched {
-            display: flex;
-        }
-
-        .movies {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-area  {
+        .form-item {
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
-            justify-content: flex-end;
             align-items: center;
-        }
-        .form-area > *  {
-            flex: 1 1;
-        }
-        .form-area label {
-            text-align: right;
-            padding-right: .5rem;
-            font-size: .9rem
-        }
-        .submit {
-            margin: 5px auto;
+            justify-content: flex-end;
+            padding: 10px;
         }
 
+        .form-item>* {
+            flex: 1 1;
+        }
+
+        .right {
+            text-align: right;
+            padding-right: 10px;
+        }
+
+        .left {
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        .submit {
+            max-width: 100px;
+            padding: .75rem;
+            margin: 5px auto;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
     </style>
 
 </head>
@@ -79,34 +76,34 @@
 
         <form action="" id="survey-form">
             <fieldset>
-                <p class="form-area">
-                    <label id="name-label" for="name">*Name</label>
-                    <input id="name" type="text" name="name" placeholder="enter your name" required>
-                </p>
-                <p class="form-area">
-                    <label id="email-label" for="email">*Email</label>
-                    <input id="email" type="email" name="email" label id="email-label" placeholder="enter your email address" required>
-                </p>
-                <p class="form-area">
-                    <label id="number-label" for="age">*Age</label>
-                    <input id="number" type="number" name="age" label id="number-label" placeholder="age" min="1" max="99" required>
-                </p>
-                
-                
-            <div class="form-area">
-                <label id="dropdown-label" for="dropdown">*Occupation Status</label>
-                <select name="dropdown" id="dropdown" required>
-                    <option value="student">Student</option>
-                    <option value="part-time">Part-time</option>
-                    <option value="full-time">Full-time</option>
-                    <option value="preference">Prefer not to say</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-                
-                <section class="form-area" id="fanstatus">
-                    <label>Do you consider yourself a comic book fan?</label>
-                    <div>
+                <div class="form-item">
+                    <label class="right" id="name-label" for="name">*Name</label>
+                    <input class="left" id="name" type="text" name="name" placeholder="enter your name" required>
+                </div>
+                <div class="form-item">
+                    <label class="right" id="email-label" for="email">*Email</label>
+                    <input class="left" id="email" type="email" name="email" label id="email-label" placeholder="enter your email address" required>
+                </div>
+                <div class="form-item">
+                    <label class="right" id="number-label" for="age">*Age</label>
+                    <input class="left" id="number" type="number" name="age" label id="number-label" placeholder="age" min="1" max="99" required>
+                </div>
+
+
+                <div class="form-item">
+                    <label class="right" id="dropdown-label" for="dropdown">*Occupation Status</label>
+                    <select class="left" name="dropdown" id="dropdown" required>
+                        <option value="student">Student</option>
+                        <option value="part-time">Part-time</option>
+                        <option value="full-time">Full-time</option>
+                        <option value="preference">Prefer not to say</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <section class="form-item" id="fanstatus">
+                    <p class="right">Do you consider yourself a comic book fan?</p>
+                    <div class="left">
                         <input type="radio" id="fanChoice1" name="fan" value="yes">
                         <label for="fanChoice1">Yes</label>
 
@@ -118,9 +115,9 @@
                     </div>
                 </section>
 
-                <!-- <section class="movieswatched">
-                    <p>Which of the following movies have you seen?</p>
-                    <div class="movies">
+                <section class="form-item movieswatched">
+                    <p class="right">Which of the following movies have you seen?</p>
+                    <div class="left movies">
                         <div class="movie">
                             <input type="checkbox" name="movieName" id="iron-man1" value="iron-man1">
                             <label for="iron-man1">Iron Man</label>
@@ -152,19 +149,25 @@
                         </div>
 
                     </div>
-                </section> -->
-
-                <section class="form-area" id="comments">
-                    <label>Any comments or suggestions?</label>
-                    <textarea name="comment" id="comment" cols="50" rows="5"></textarea>
                 </section>
-                <div class="submit">
-                    <input type="submit" id="submit" value="Submit">
+                <section id="comments">
+                    <div class="form-item" id="comments">
+                        <label class="right">Any comments or suggestions?</label>
+                        <textarea class="left" name="comment" id="comment" cols="50" rows="5"></textarea>
+                    </div>
+                </section>
+
+
+                <div class="form-item">
+                    <input class="submit" type="submit" id="submit" value="Submit">
                 </div>
+
             </fieldset>
 
         </form>
+
     </main>
+
 
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
