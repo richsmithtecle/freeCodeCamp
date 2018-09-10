@@ -27,7 +27,7 @@
             border: 1px dotted green;
         }
         .top-nav {
-            max-width: 300px;
+            min-width: 300px;
             display: flex;
             flex-direction: row;
             justify-content: flex-end;
@@ -38,11 +38,30 @@
             flex-grow: 1;
             border: 1px solid white;
             text-align: right;
-            
-            
+            max-width: 15rem;
+        }
+        .top-nav a,
+        .top-nav a:visited {
+            color: white;
+            text-decoration: none;
+        }
+        .top-nav a:hover {
+            text-decoration: underline;
+        }
+        #about,
+        #video,
+        #options,
+        #signup {
+            border: 1px solid red;
+            min-height: 20vh;
         }
         
-       
+        footer {
+            color: white;
+            background: black;
+            text-align: center;
+            min-height: 5vh;
+        }
     </style>
 
 </head>
@@ -51,13 +70,34 @@
     <img src=https://via.placeholder.com/200x50 alt="" id="header-img">
     <nav id="nav-bar">
         <ul class="top-nav">
-            <li class="nav-link">link 1</li>
-            <li class="nav-link">link 2</li>
-            <li class="nav-link">link 3</li>
+            <li><a class="nav-link" href="#about">About</a></li>
+            <li><a class="nav-link" href="#video">Video</a></li>
+            <li><a class="nav-link" href="#options">Options</a></li>
+            <li><a class="nav-link" href="#signup">Email Sign-up</a></li>
         </ul>
     </nav>
+
+</header>
+
+<main>
+    <section id="about"></section>
+   
+    <!-- <section id="video" style="position:relative;height:0;padding-bottom:56.27%"> -->
+    <!-- <section id="video">
+            <iframe id="video" src="https://www.youtube.com/embed/7C_vouLZvk0?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="640" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </section> -->
     
-</header>    
+    <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/7C_vouLZvk0?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    
+        
+    
+    <section id="options"></section>
+    <section id="signup"></section>
+</main>
+
+<footer>
+    <p>Footer Text - Something awesome will go here!</p>
+</footer>
     
    
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
